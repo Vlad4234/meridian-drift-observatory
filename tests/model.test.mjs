@@ -6,6 +6,7 @@ test('crossed BUY fills on explicit step and cancel does not flatten position',(
   let s=buy(initialState());
   assert.equal(s.fills.length,0);
   s=reduce(s,{type:'STEP'});
+  assert.equal(s.fills.length,1,'crossing BUY must produce one mock fill');
   assert.deepEqual([s.quote,s.base,s.orders.length,s.fills[0].executionPrice],[9901,1,0,99]);
   s=reduce(s,{type:'PLACE',side:'SELL',limit:105,quantity:1});
   assert.equal(reservedBase(s),1);
