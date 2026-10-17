@@ -30,7 +30,7 @@ Cinq pages sont disponibles : accueil, systèmes, opérations, événements et c
 
 ## Dons et portée
 
-L'accueil prévoit un message en EN/RU/IT/FR/ES et l'adresse publique du propriétaire. Tant qu'aucun lien n'est configuré, la page indique clairement qu'un don ne peut pas y être envoyé. Une fois configuré, le lien ouvre un service externe; ce projet ne traite aucun paiement. Seuls les devises, cryptomonnaies, moyens et réseaux pris en charge par ce service sont disponibles. Vérifiez-les avant l'envoi.
+L'accueil présente un message en EN/RU/IT/FR/ES et l'adresse EVM publique du propriétaire avec un bouton de copie. Les monnaies natives et jetons des réseaux EVM compatibles, dont USDT et USDC lorsqu'ils sont pris en charge, peuvent être envoyés après vérification du réseau et du jeton précis. Cette adresse n'accepte pas les devises classiques ni les transferts hors EVM. La démo ne connecte aucun portefeuille et n'envoie aucune transaction; l'adresse de don est distincte du compte de trading fictif.
 
 Le concept Meridian Drift est un texte du projet source, sans maquette visuelle. La palette et la disposition adaptent le Control Room existant. Le projet possède un historique Git neuf, sans données privées ni services de production.
 

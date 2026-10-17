@@ -30,7 +30,7 @@ Fünf Seiten sind nutzbar: Start, Systeme, Betrieb, Ereignisse und Konto. Der Zu
 
 ## Spenden und Grenzen
 
-Auf der Startseite sind Texte in EN/RU/IT/FR/ES und ein öffentlicher Zahlungslink des Eigentümers vorgesehen. Solange kein Link eingetragen ist, erklärt die Seite, dass dort keine Spende möglich ist. Nach Einrichtung öffnet der Link einen externen Dienst; die Demo verarbeitet keine Zahlungen. Nur vom Dienst unterstützte Währungen, Kryptowährungen, Verfahren und Netzwerke sind verfügbar. Vor dem Senden prüfen.
+Die Startseite zeigt Texte in EN/RU/IT/FR/ES sowie die öffentliche EVM-Adresse des Eigentümers mit Kopierschaltfläche. Native Coins und Token kompatibler EVM-Netzwerke, einschließlich USDT und USDC, sofern unterstützt, können nach Prüfung des genauen Netzwerks und Tokens gesendet werden. Fiat-Währungen und Überweisungen außerhalb von EVM werden an dieser Adresse nicht angenommen. Die Demo verbindet kein Wallet und versendet keine Transaktionen; die Spendenadresse ist vom simulierten Trading-Konto getrennt.
 
 Meridian Drift stammt aus einem Textkonzept im Quellprojekt; eine visuelle Vorlage lag nicht vor. Farben und Layout lehnen sich an den vorhandenen Control Room an. Dieses Projekt hat eine neue Git-Historie und enthält keine privaten Daten oder Produktionsdienste.
 

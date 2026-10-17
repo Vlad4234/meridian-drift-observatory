@@ -68,9 +68,12 @@ a proof that arbitrary secrets can never exist. Review the exported file list.
 
 For a hosted static copy, preserve the CSP and other response headers implemented
 in `scripts/serve.mjs`, and rewrite the five named routes to `index.html`.
-The donation destination, once configured, is a visitor-opened external link;
-the application makes no payment requests. Only methods and currencies actually
-supported by that destination can be used. Verify the destination before sending.
+The owner supplied a public EVM donation address displayed on Home, with a
+copy button. EVM-compatible native coins and tokens, including USDT or USDC
+where supported, may be sent only after checking the specific network and token.
+Fiat currencies and non-EVM transfers are not supported by this address. The
+demo neither connects a wallet nor sends transactions. This public donation
+address is separate from the synthetic trading account and mock model.
 
 ## Rights
 

@@ -1,6 +1,6 @@
 import NAV from './navigation.mjs';
 import {initialState, reduce, price, PRICES, reservedQuote, reservedBase} from './model.mjs';
-import {DONATION_URL} from './donation.mjs';
+import {DONATION_ADDRESS} from './donation.mjs';
 
 let state = initialState();
 let notice = '';
@@ -35,14 +35,13 @@ function controls() {
 }
 function donations() {
   const lines = [
-    ['EN', 'Support the project with a donation. Any currency or cryptocurrency supported by the payment destination is welcome. Check the available payment methods and network before sending.'],
-    ['RU', 'Поддержите развитие проекта донатом. Принимаем любую валюту и криптовалюту, которую поддерживает платёжный сервис. Перед отправкой проверьте доступный способ и сеть.'],
-    ['IT', 'Sostieni lo sviluppo del progetto con una donazione. Accettiamo qualsiasi valuta o criptovaluta supportata dal servizio di pagamento. Verifica il metodo e la rete prima di inviare.'],
-    ['FR', 'Soutenez le développement du projet par un don. Toute devise ou cryptomonnaie prise en charge par le service de paiement est acceptée. Vérifiez le mode de paiement et le réseau avant tout envoi.'],
-    ['ES', 'Apoya el desarrollo del proyecto con una donación. Aceptamos cualquier moneda o criptomoneda admitida por el servicio de pago. Comprueba el método y la red antes de enviar.'],
+    ['EN', 'Support the project with a donation in EVM-compatible native coins or tokens, including USDT and USDC where supported. Verify the exact network and token before sending. Fiat payments are not available at this address.'],
+    ['RU', 'Поддержите развитие проекта донатом в нативных монетах или токенах EVM-сетей, включая USDT и USDC там, где они поддерживаются. Перед отправкой проверьте конкретную сеть и токен. Обычные валюты на этот адрес не принимаются.'],
+    ['IT', 'Sostieni il progetto con monete native o token di reti EVM, inclusi USDT e USDC dove supportati. Verifica la rete e il token esatti prima di inviare. Questo indirizzo non accetta valute fiat.'],
+    ['FR', 'Soutenez le projet avec des monnaies natives ou des jetons sur les réseaux EVM, dont USDT et USDC lorsqu’ils sont pris en charge. Vérifiez le réseau et le jeton exacts avant l’envoi. Cette adresse n’accepte pas les devises classiques.'],
+    ['ES', 'Apoya el proyecto con monedas nativas o tokens de redes EVM, incluidos USDT y USDC donde estén disponibles. Verifica la red y el token exactos antes de enviar. Esta dirección no acepta monedas fiduciarias.'],
   ];
-  const valid = typeof DONATION_URL === 'string' && /^https:\/\/[a-z0-9.-]+\//i.test(DONATION_URL) && !/["'<>\s]/.test(DONATION_URL);
-  const destination = valid ? `<a class="donation-link" href="${DONATION_URL}" target="_blank" rel="noopener noreferrer">${DONATION_URL}</a>` : '<p class="donation-pending">Платёжная ссылка пока не указана. Переводы через эту страницу сейчас невозможны. / Payment link pending.</p>';
+  const destination = `<div class="donation-address"><span>PUBLIC EVM ADDRESS · ДОБРОВОЛЬНЫЙ ДОНАТ</span><code>${DONATION_ADDRESS}</code><button id="copy-address" type="button">Скопировать адрес / Copy address</button></div><p class="donation-warning">Проверьте сеть и токен в своём кошельке. Ошибочный перевод может быть необратим. Демо не подключает кошелёк и не отправляет транзакции.</p>`;
   return `<section class="panel donation"><div class="section-head"><h2>Поддержать проект / Support the project</h2>${tag('OPTIONAL','purple')}</div><div class="donation-languages">${lines.map(([lang,copy])=>`<p><strong lang="${lang.toLowerCase()}">${lang}</strong><span lang="${lang.toLowerCase()}">${copy}</span></p>`).join('')}</div>${destination}</section>`;
 }
 function events() {
@@ -71,6 +70,11 @@ function route() {
   $('#order-form')?.addEventListener('submit',(e)=>{e.preventDefault(); dispatch({type:'PLACE',side:$('#side').value,limit:Number($('#limit').value),quantity:Number($('#quantity').value)});});
   $('#health')?.addEventListener('change',(e)=>dispatch({type:'HEALTH',value:e.target.value}));
   document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>dispatch({type:b.dataset.action})));
+  $('#copy-address')?.addEventListener('click',async()=>{
+    try { await navigator.clipboard.writeText(DONATION_ADDRESS); notice='Публичный EVM-адрес скопирован. Проверьте сеть и токен перед отправкой.'; $('#feedback').classList.remove('error'); }
+    catch { notice='Не удалось скопировать адрес. Выделите его и скопируйте вручную.'; $('#feedback').classList.add('error'); }
+    $('#feedback').hidden=false; $('#feedback').textContent=notice;
+  });
 }
 function dispatch(action) {
   try {

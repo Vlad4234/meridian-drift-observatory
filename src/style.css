@@ -13,4 +13,9 @@
 .donation-link{display:block;color:#b0dbff;overflow-wrap:anywhere;padding:14px;border:1px solid #5578a1;border-radius:10px}
 .donation-link:hover,.donation-link:focus-visible{background:#243858}
 .donation-pending{padding:12px;border:1px solid #785d45;border-radius:10px;color:#ffe0b8}
+.donation-address{display:grid;gap:8px;padding:16px;border:1px solid #5578a1;border-radius:10px;background:#0e1b2e}
+.donation-address span{font-size:10px;letter-spacing:.12em;color:#9bccff}
+.donation-address code{font-size:15px;overflow-wrap:anywhere;user-select:all;color:#f4f8ff}
+.donation-address button{justify-self:start;min-height:40px}
+.donation-warning{font-size:12px;color:#ffe0b8;line-height:1.5;margin-bottom:0}
 @media(max-width:700px){.donation-languages{grid-template-columns:1fr}.donation{margin-top:16px}}

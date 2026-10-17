@@ -30,7 +30,7 @@ Sono disponibili cinque pagine: home, sistemi, operazioni, eventi e account. Lo 
 
 ## Donazioni e limiti
 
-La home prevede un messaggio EN/RU/IT/FR/ES e il link pubblico del proprietario. Fino alla configurazione del link, la pagina indica che non è possibile inviare una donazione da qui. Una volta configurato, il visitatore apre un servizio esterno; questa applicazione non elabora pagamenti. Sono disponibili soltanto valute, criptovalute, metodi e reti supportati dal servizio. Verificali prima di inviare.
+La home mostra un messaggio EN/RU/IT/FR/ES e l'indirizzo EVM pubblico del proprietario con un pulsante per copiarlo. Monete native e token di reti EVM compatibili, inclusi USDT e USDC dove supportati, possono essere inviati dopo aver verificato rete e token specifici. Questo indirizzo non accetta valute fiat o trasferimenti non EVM. La demo non collega portafogli e non invia transazioni; l'indirizzo per le donazioni è separato dall'account di trading simulato.
 
 Meridian Drift è un concept testuale nel progetto originale, privo di bozzetto visivo. Colori e disposizione sono adattati dall'interfaccia Control Room esistente. Questo progetto ha una nuova storia Git e non include dati privati o servizi di produzione.
 

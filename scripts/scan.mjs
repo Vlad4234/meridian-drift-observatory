@@ -6,6 +6,8 @@ import {isIP} from 'node:net';
 // Never print matched material. Locations and categories are enough for triage.
 const findings=[];
 let files=0, objects=0;
+// Owner-authorized public donation address; every other EVM address is a finding.
+const publicDonationAddress='0xAaD7926f1385b1dF53Cc8bb9187502328C6536C3';
 const rules=[
   ['private-key', /-----BEGIN (?:[A-Z ]*PRIVATE KEY|OPENSSH PRIVATE KEY)-----/g],
   ['github-token', /\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})\b/g],
@@ -27,6 +29,7 @@ function scan(location,bytes) {
     pattern.lastIndex=0;
     for(const m of text.matchAll(pattern)) {
       const v=m[0];
+      if(category==='wallet-address'&&v===publicDonationAddress)continue;
       if(category==='ipv4'&&v==='127.0.0.1')continue;
       if(category==='email'&&v.endsWith('@example.invalid'))continue;
       if(category==='hostname'&&v==='www.w3.org')continue;
