@@ -21,7 +21,7 @@ function chart() {
     const x = 14 + i * 18;
     return `<line x1="${x}" x2="${x}" y1="${y(high)}" y2="${y(low)}" stroke="${color}"/><rect x="${x - 4}" y="${Math.min(y(open), y(close))}" width="8" height="${Math.max(2, Math.abs(y(close) - y(open)))}" fill="${color}"/>`;
   }).join('');
-  return `<div class="chart-wrap"><svg class="chart" viewBox="0 0 770 280" role="img" aria-label="DEMO: синтетические свечи, цикл из 12 вымышленных цен">${[96,99,102,105].map(v=>`<line x1="0" x2="730" y1="${236-(v-93)*16}" y2="${236-(v-93)*16}" stroke="var(--border)" stroke-dasharray="3 7"/><text x="738" y="${240-(v-93)*16}" fill="#94a3b8" font-size="11">${v}</text>`).join('')}${candles}<text x="12" y="270" fill="#94a3b8" font-size="11">SYNTHETIC LOOP / DEMO DATA / NOT MARKET HISTORY</text></svg></div>`;
+  return `<div class="chart-wrap"><svg class="chart" viewBox="0 0 800 280" role="img" aria-label="DEMO: синтетические свечи, цикл из 12 вымышленных цен">${[96,99,102,105].map(v=>`<line x1="0" x2="730" y1="${236-(v-93)*16}" y2="${236-(v-93)*16}" stroke="var(--border)" stroke-dasharray="3 7"/><text x="738" y="${240-(v-93)*16}" fill="#94a3b8" font-size="11">${v}</text>`).join('')}${candles}<text x="12" y="270" fill="#94a3b8" font-size="11">SYNTHETIC LOOP / DEMO DATA / NOT MARKET HISTORY</text></svg></div>`;
 }
 function summary() {
   return `<div class="metrics">${metric('Синтетический баланс',fmt(state.quote)+' UNIT','DEMO · условные единицы')}${metric('Mock-позиция',fmt(state.base)+' DEMO','Отмена заявок не закрывает позицию')}${metric('Открытые mock-заявки',state.orders.length,'Исполнено: '+state.fills.length)}${metric('Источник данных',state.health,'Шаг сценария '+state.tick)}</div>`;
