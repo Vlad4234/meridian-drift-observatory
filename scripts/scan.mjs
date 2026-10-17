@@ -51,7 +51,8 @@ function scan(location,bytes) {
 async function walk(dir) {
   for(const name of await readdir(dir)) {
     const full=path.join(dir,name), relative=path.relative('.',full);
-    if(relative==='node_modules'||relative.startsWith(`.git${path.sep}objects`))continue;
+    // Clone-local config, hooks and reflogs are never published; Git objects are scanned below.
+    if(relative==='node_modules'||relative==='.git')continue;
     const stat=await lstat(full);
     if(stat.isSymbolicLink()){findings.push({category:'symlink',location:relative});continue;}
     if(stat.isDirectory()){await walk(full);continue;}
