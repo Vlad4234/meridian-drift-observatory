@@ -1,6 +1,7 @@
 import {readdir, readFile, lstat} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import path from 'node:path';
+import {isIP} from 'node:net';
 
 // Never print matched material. Locations and categories are enough for triage.
 const findings=[];
@@ -17,7 +18,8 @@ const rules=[
   ['credential-assignment', /(?:api[_-]?key|secret|access[_-]?token|password)\s*[=:]\s*["'][A-Za-z0-9+/_=-]{12,}["']/gi],
   ['ipv4', /\b(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)\b/g],
   ['email', /\b[A-Za-z0-9_.+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g],
-  ['url', /https?:\/\/[^\s"'<>`\)]+/g]
+  ['url', /https?:\/\/[^\s"'<>`\)]+/g],
+  ['hostname', /\b(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:com|net|org|io|site|ru|xyz|dev|app|local|internal|ai)\b/gi]
 ];
 function scan(location,bytes) {
   const text=bytes.toString('utf8');
@@ -27,10 +29,14 @@ function scan(location,bytes) {
       const v=m[0];
       if(category==='ipv4'&&v==='127.0.0.1')continue;
       if(category==='email'&&v.endsWith('@example.invalid'))continue;
+      if(category==='hostname'&&v==='www.w3.org')continue;
       if(category==='url'&&(/^https?:\/\/localhost(?::[^/]+)?(?:\/|$)/.test(v)||/^http:\/\/www\.w3\.org\/2000\/svg$/.test(v)))continue;
       const line=text.slice(0,m.index).split('\n').length;
       findings.push({category,location,line});
     }
+  }
+  for(const m of text.matchAll(/[a-fA-F0-9:]{3,}/g)) {
+    if(isIP(m[0])===6&&m[0]!=='::1')findings.push({category:'ipv6',location,line:text.slice(0,m.index).split('\n').length});
   }
   // Broad entropy heuristic: keys without a known provider prefix.
   for(const m of text.matchAll(/(?<![\w])(?:[A-Za-z0-9+/_=-]{40,})(?![\w])/g)) {
