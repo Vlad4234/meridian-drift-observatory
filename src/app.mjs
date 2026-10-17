@@ -40,6 +40,11 @@ function donations() {
     ['IT', 'Sostieni il progetto con monete native o token di reti EVM, inclusi USDT e USDC dove supportati. Verifica la rete e il token esatti prima di inviare. Questo indirizzo non accetta valute fiat.'],
     ['FR', 'Soutenez le projet avec des monnaies natives ou des jetons sur les réseaux EVM, dont USDT et USDC lorsqu’ils sont pris en charge. Vérifiez le réseau et le jeton exacts avant l’envoi. Cette adresse n’accepte pas les devises classiques.'],
     ['ES', 'Apoya el proyecto con monedas nativas o tokens de redes EVM, incluidos USDT y USDC donde estén disponibles. Verifica la red y el token exactos antes de enviar. Esta dirección no acepta monedas fiduciarias.'],
+    ['DE', 'Unterstütze das Projekt mit nativen Coins oder Token kompatibler EVM-Netzwerke, einschließlich USDT und USDC, sofern verfügbar. Prüfe vor dem Senden Netzwerk und Token. Diese Adresse nimmt keine Fiat-Währungen an.'],
+    ['UK', 'Підтримайте проєкт нативними монетами або токенами сумісних EVM-мереж, зокрема USDT і USDC там, де вони підтримуються. Перед надсиланням перевірте мережу й токен. Звичайні валюти ця адреса не приймає.'],
+    ['ZH', '欢迎通过兼容 EVM 网络的原生币或代币支持本项目，包括相应网络支持的 USDT 和 USDC。发送前请核对网络与代币。此地址不接收法定货币。'],
+    ['JA', '対応する EVM ネットワークのネイティブ通貨やトークンでプロジェクトを支援できます。利用可能な場合は USDT、USDC も対象です。送信前にネットワークとトークンを確認してください。法定通貨は受け取れません。'],
+    ['HI', 'संगत EVM नेटवर्क के मूल कॉइन या टोकन से परियोजना का समर्थन करें, जहाँ उपलब्ध हों वहाँ USDT और USDC सहित। भेजने से पहले नेटवर्क और टोकन जाँचें। इस पते पर फिएट मुद्रा स्वीकार नहीं होती।'],
   ];
   const destination = `<div class="donation-address"><span>PUBLIC EVM ADDRESS · ДОБРОВОЛЬНЫЙ ДОНАТ</span><code>${DONATION_ADDRESS}</code><button id="copy-address" type="button">Скопировать адрес / Copy address</button></div><p class="donation-warning">Проверьте сеть и токен в своём кошельке. Ошибочный перевод может быть необратим. Демо не подключает кошелёк и не отправляет транзакции.</p>`;
   return `<section class="panel donation"><div class="section-head"><h2>Поддержать проект / Support the project</h2>${tag('OPTIONAL','purple')}</div><div class="donation-languages">${lines.map(([lang,copy])=>`<p><strong lang="${lang.toLowerCase()}">${lang}</strong><span lang="${lang.toLowerCase()}">${copy}</span></p>`).join('')}</div>${destination}</section>`;

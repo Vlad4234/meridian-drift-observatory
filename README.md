@@ -1,6 +1,6 @@
 # Meridian Drift Observatory · DEMO Control Room
 
-Languages: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md)
+Languages: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md) · [Español](README.es.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [हिन्दी](README.hi.md)
 
 **All balances, candles, orders and executions are synthetic DEMO data.**
 This is an interactive visitor demonstration, not a trading application,
@@ -42,6 +42,9 @@ The server's CSP sets `connect-src 'none'`.
 ## Included components
 
 - Five Control Room destinations: Home, Systems, Operations, Events, Account.
+- Ten-language documentation (EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI) and ten-language
+  donation guidance on Home. The simulation controls themselves use Russian
+  labels; the translated guides explain their actions.
 - Control Room palette/navigation exported into `src/control-room-tokens.json`.
 - Adapted desktop sidebar, mobile drawer, market-board and status-strip layout.
 - New SVG candle rendering, in-memory mock order model and failure scenarios.
@@ -77,6 +80,5 @@ address is separate from the synthetic trading account and mock model.
 
 ## Rights
 
-See `NOTICE.md`. The owner authorized public presentation of this demo. No
-open-source license grant has been selected; all rights remain reserved. Do not
-imply an upstream license or permission that has not been given.
+See `NOTICE.md`. The owner licensed this separate public demo under MIT; see `LICENSE`. This
+does not license the private source repositories or any excluded production code.

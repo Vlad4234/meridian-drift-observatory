@@ -1,6 +1,6 @@
 # Meridian Drift Observatory · sala di controllo DEMO
 
-Lingue: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md)
+Lingue: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md) · [Español](README.es.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [हिन्दी](README.hi.md)
 
 **Tutti i saldi, le candele, gli ordini e le esecuzioni sono dati sintetici DEMO.** È una dimostrazione interattiva, non un'app di trading, un backtest o una prova di rendimenti reali.
 
@@ -30,10 +30,10 @@ Sono disponibili cinque pagine: home, sistemi, operazioni, eventi e account. Lo 
 
 ## Donazioni e limiti
 
-La home mostra un messaggio EN/RU/IT/FR/ES e l'indirizzo EVM pubblico del proprietario con un pulsante per copiarlo. Monete native e token di reti EVM compatibili, inclusi USDT e USDC dove supportati, possono essere inviati dopo aver verificato rete e token specifici. Questo indirizzo non accetta valute fiat o trasferimenti non EVM. La demo non collega portafogli e non invia transazioni; l'indirizzo per le donazioni è separato dall'account di trading simulato.
+La home mostra un messaggio EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI e l'indirizzo EVM pubblico del proprietario con un pulsante per copiarlo. Monete native e token di reti EVM compatibili, inclusi USDT e USDC dove supportati, possono essere inviati dopo aver verificato rete e token specifici. Questo indirizzo non accetta valute fiat o trasferimenti non EVM. La demo non collega portafogli e non invia transazioni; l'indirizzo per le donazioni è separato dall'account di trading simulato.
 
 Meridian Drift è un concept testuale nel progetto originale, privo di bozzetto visivo. Colori e disposizione sono adattati dall'interfaccia Control Room esistente. Questo progetto ha una nuova storia Git e non include dati privati o servizi di produzione.
 
 `npm run build` esporta sette file consentiti in `dist/`. `npm run scan` controlla file, build, metadati e tutti gli oggetti Git, mostrando solo categoria e posizione dei rilievi. Per hosting statico conserva le intestazioni di `scripts/serve.mjs` e inoltra le cinque route a `index.html`.
 
-Consulta [NOTICE.md](NOTICE.md). Il proprietario ha autorizzato la demo pubblica; non è stata concessa una licenza open source.
+Consulta [NOTICE.md](NOTICE.md). Questa demo pubblica separata è distribuita con licenza MIT; consulta [LICENSE](LICENSE). I repository privati originali non sono coperti.

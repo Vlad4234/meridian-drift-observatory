@@ -1,6 +1,6 @@
 # Meridian Drift Observatory · poste de contrôle DEMO
 
-Langues : [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md)
+Langues : [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md) · [Español](README.es.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [हिन्दी](README.hi.md)
 
 **Tous les soldes, chandeliers, ordres et exécutions sont des données synthétiques DEMO.** Il s'agit d'une démonstration interactive, pas d'une application de trading, d'un backtest ou d'une preuve de rendement réel.
 
@@ -30,10 +30,10 @@ Cinq pages sont disponibles : accueil, systèmes, opérations, événements et c
 
 ## Dons et portée
 
-L'accueil présente un message en EN/RU/IT/FR/ES et l'adresse EVM publique du propriétaire avec un bouton de copie. Les monnaies natives et jetons des réseaux EVM compatibles, dont USDT et USDC lorsqu'ils sont pris en charge, peuvent être envoyés après vérification du réseau et du jeton précis. Cette adresse n'accepte pas les devises classiques ni les transferts hors EVM. La démo ne connecte aucun portefeuille et n'envoie aucune transaction; l'adresse de don est distincte du compte de trading fictif.
+L'accueil présente un message en EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI et l'adresse EVM publique du propriétaire avec un bouton de copie. Les monnaies natives et jetons des réseaux EVM compatibles, dont USDT et USDC lorsqu'ils sont pris en charge, peuvent être envoyés après vérification du réseau et du jeton précis. Cette adresse n'accepte pas les devises classiques ni les transferts hors EVM. La démo ne connecte aucun portefeuille et n'envoie aucune transaction; l'adresse de don est distincte du compte de trading fictif.
 
 Le concept Meridian Drift est un texte du projet source, sans maquette visuelle. La palette et la disposition adaptent le Control Room existant. Le projet possède un historique Git neuf, sans données privées ni services de production.
 
 `npm run build` exporte sept fichiers autorisés vers `dist/`. `npm run scan` inspecte les fichiers, la construction, les métadonnées et tous les objets Git; seules la catégorie et la localisation des résultats s'affichent. Pour un hébergement statique, conservez les en-têtes de `scripts/serve.mjs` et redirigez les cinq routes vers `index.html`.
 
-Voir [NOTICE.md](NOTICE.md) pour les droits. Le propriétaire a autorisé la démonstration publique; aucune licence libre n'a été accordée.
+Voir [NOTICE.md](NOTICE.md) pour les droits. Cette démonstration publique séparée est sous licence MIT; voir [LICENSE](LICENSE). Les dépôts privés sources ne sont pas couverts.

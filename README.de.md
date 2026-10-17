@@ -1,6 +1,6 @@
 # Meridian Drift Observatory · DEMO-Kontrollraum
 
-Sprachen: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md)
+Sprachen: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md) · [Español](README.es.md) · [日本語](README.ja.md) · [简体中文](README.zh.md) · [हिन्दी](README.hi.md)
 
 **Alle Kontostände, Kerzen, Aufträge und Ausführungen sind synthetische DEMO-Daten.** Dies ist eine interaktive Oberfläche, keine Trading-Anwendung, kein Backtest und kein Nachweis realer Gewinne.
 
@@ -30,10 +30,10 @@ Fünf Seiten sind nutzbar: Start, Systeme, Betrieb, Ereignisse und Konto. Der Zu
 
 ## Spenden und Grenzen
 
-Die Startseite zeigt Texte in EN/RU/IT/FR/ES sowie die öffentliche EVM-Adresse des Eigentümers mit Kopierschaltfläche. Native Coins und Token kompatibler EVM-Netzwerke, einschließlich USDT und USDC, sofern unterstützt, können nach Prüfung des genauen Netzwerks und Tokens gesendet werden. Fiat-Währungen und Überweisungen außerhalb von EVM werden an dieser Adresse nicht angenommen. Die Demo verbindet kein Wallet und versendet keine Transaktionen; die Spendenadresse ist vom simulierten Trading-Konto getrennt.
+Die Startseite zeigt Texte in EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI sowie die öffentliche EVM-Adresse des Eigentümers mit Kopierschaltfläche. Native Coins und Token kompatibler EVM-Netzwerke, einschließlich USDT und USDC, sofern unterstützt, können nach Prüfung des genauen Netzwerks und Tokens gesendet werden. Fiat-Währungen und Überweisungen außerhalb von EVM werden an dieser Adresse nicht angenommen. Die Demo verbindet kein Wallet und versendet keine Transaktionen; die Spendenadresse ist vom simulierten Trading-Konto getrennt.
 
 Meridian Drift stammt aus einem Textkonzept im Quellprojekt; eine visuelle Vorlage lag nicht vor. Farben und Layout lehnen sich an den vorhandenen Control Room an. Dieses Projekt hat eine neue Git-Historie und enthält keine privaten Daten oder Produktionsdienste.
 
 `npm run build` exportiert genau sieben erlaubte Dateien nach `dist/`. `npm run scan` prüft Dateien, Build, Metadaten und sämtliche Git-Objekte und zeigt bei Treffern nur Kategorie und Ort. Bei statischem Hosting die Header aus `scripts/serve.mjs` beibehalten und fünf Routen auf `index.html` umschreiben.
 
-Rechte: [NOTICE.md](NOTICE.md). Der Eigentümer hat die öffentliche Demo genehmigt; eine Open-Source-Lizenz wurde nicht erteilt.
+Rechte: [NOTICE.md](NOTICE.md). Diese separate öffentliche Demo steht unter der MIT-Lizenz; siehe [LICENSE](LICENSE). Private Quellrepositorys sind nicht abgedeckt.
