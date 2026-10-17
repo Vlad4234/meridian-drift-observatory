@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meridian Drift — синтетическая демонстрация Control Room. Все данные DEMO.">
+  <title>Meridian Drift · DEMO Control Room</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <div class="shell">
+    <button class="scrim" id="scrim" aria-label="Закрыть меню" hidden></button>
+    <aside id="sidebar" aria-label="Навигация">
+      <div class="brand"><span class="emblem" aria-hidden="true">✧</span><div>Meridian Drift<small>CONTROL ROOM / FIELD ARCHIVE</small></div><button id="close-menu" aria-label="Закрыть меню">×</button></div>
+      <nav id="navigation"></nav>
+      <div class="sidebar-note"><span class="tiny-dot"></span> SYNTHETIC UNIVERSE<br>Все данные вымышлены.<br>Торговых подключений нет.</div>
+    </aside>
+    <div class="workspace">
+      <header><div class="header-title"><button id="open-menu" aria-label="Открыть меню" aria-expanded="false">☰</button><span id="page-title">Главная</span></div><span class="demo-tag">DEMO · MOCK ONLY</span></header>
+      <main>
+        <div class="disclosure"><strong>DEMO</strong><span>Синтетический полевой архив. Заявки, исполнения и баланс вымышлены. Это не реальные результаты бота.</span></div>
+        <div id="page"></div>
+        <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      </main>
+      <footer>MERIDIAN DRIFT / LOCAL SIMULATION <span>NO ACCOUNT · NO KEYS · NO LIVE EXECUTION</span></footer>
+    </div>
+  </div>
+</body>
+</html>

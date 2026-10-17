@@ -1,0 +1,4 @@
+{
+  "colors": {"bg":"#0b0d10","surface":"#12151a","surface2":"#181c22","surface3":"#1d222a","border":"#242a33","healthy":"#22c55e","warning":"#eab308","blocked":"#ef4444","offline":"#6b7280","unknown":"#a78bfa","accent":"#38bdf8"},
+  "nav": [["/","Главная"],["/systems","Системы"],["/operations","Операции"],["/events","События"],["/account","Кабинет"]]
+}

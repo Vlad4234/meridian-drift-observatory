@@ -1,0 +1,19 @@
+# Rights and provenance
+
+The Control Room palette, navigation names and layout arrangement derive from
+owner-provided interface sources. Meridian Drift names and field-archive copy
+derive from the owner-provided concept. No source license or asset license file
+was present in the inspected inputs. Owner confirmation of publication rights
+and choice of a public code license remain required before publication.
+
+The browser logic, mock model, plain CSS adaptation, SVG candles and favicon
+were prepared for this demo. No third-party images, fonts, icons, screenshots,
+charts library or bundled packages are included. UI symbols are text rendered
+by the visitor's system font. All numerical data is newly synthesized.
+
+Runtime/build dependencies: Node.js standard library only. Node.js and npm are
+prerequisites, not redistributed. `package-lock.json` contains no packages.
+Development browser automation, used externally for review, is not bundled or
+required by visitors. No upstream code license is inferred from account access.
+
+License status: UNLICENSED; no license grant until the owner chooses one.
