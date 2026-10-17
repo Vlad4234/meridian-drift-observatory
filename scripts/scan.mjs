@@ -30,6 +30,7 @@ function scan(location,bytes) {
       if(category==='ipv4'&&v==='127.0.0.1')continue;
       if(category==='email'&&v.endsWith('@example.invalid'))continue;
       if(category==='hostname'&&v==='www.w3.org')continue;
+      if(category==='hostname'&&/^README\.(?:ru|fr|it|de|uk)$/i.test(v))continue;
       if(category==='url'&&(/^https?:\/\/localhost(?::[^/]+)?(?:\/|$)/.test(v)||/^http:\/\/www\.w3\.org\/2000\/svg$/.test(v)))continue;
       const line=text.slice(0,m.index).split('\n').length;
       findings.push({category,location,line});

@@ -1,0 +1,39 @@
+# Meridian Drift Observatory · DEMO-Kontrollraum
+
+Sprachen: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md)
+
+**Alle Kontostände, Kerzen, Aufträge und Ausführungen sind synthetische DEMO-Daten.** Dies ist eine interaktive Oberfläche, keine Trading-Anwendung, kein Backtest und kein Nachweis realer Gewinne.
+
+## Start
+
+Node.js 22+ und npm werden benötigt. Es gibt keine Drittanbieterpakete.
+
+```sh
+npm ci --ignore-scripts
+npm test
+npm run build
+npm start
+```
+
+Öffnen Sie `http://localhost:4173`; mit Ctrl+C beenden. Anderer lokaler Port: `PORT=4174 npm start`. Der Server bindet nur an Loopback. Registrierung, Passwort, API-Schlüssel, Konto und Umgebungsdatei sind nicht nötig. `name` und `YOUR_ACCOUNT_ID` sind Beispielwerte.
+
+## Ablauf
+
+1. Beginnen Sie mit READY und dem synthetischen Preis 100 UNIT.
+2. Geben Sie BUY mit Limit 99 und Menge 1 ein.
+3. „Следующий mock-шаг“ setzt den Preis auf 99, den Bestand auf 9901 UNIT und die Position auf 1 DEMO: simulierte Ausführung.
+4. Geben Sie SELL bei 101 ein. Zwei Schritte liefern 98 und 101; SELL wird simuliert ausgeführt.
+5. „Отменить mock-заявки“ storniert Aufträge, schließt aber keine Position.
+6. STALE oder UNAVAILABLE weist Schritte, Aufträge und Stornierungen ausdrücklich zurück. READY setzt fort; „Сбросить демо“ setzt alles zurück.
+
+Fünf Seiten sind nutzbar: Start, Systeme, Betrieb, Ereignisse und Konto. Der Zustand liegt nur im Arbeitsspeicher des Tabs; Neuladen setzt ihn zurück. Es gibt einen festen Preiszyklus, ein begrenztes Auftragsmodell und ein Ereignisprotokoll. Keine echten Trades, Marktabfragen, Signaturen, Trading-Schlüssel, Trading-Wallets, Live-Funktion oder Renditeberechnung.
+
+## Spenden und Grenzen
+
+Auf der Startseite sind Texte in EN/RU/IT/FR/ES und ein öffentlicher Zahlungslink des Eigentümers vorgesehen. Solange kein Link eingetragen ist, erklärt die Seite, dass dort keine Spende möglich ist. Nach Einrichtung öffnet der Link einen externen Dienst; die Demo verarbeitet keine Zahlungen. Nur vom Dienst unterstützte Währungen, Kryptowährungen, Verfahren und Netzwerke sind verfügbar. Vor dem Senden prüfen.
+
+Meridian Drift stammt aus einem Textkonzept im Quellprojekt; eine visuelle Vorlage lag nicht vor. Farben und Layout lehnen sich an den vorhandenen Control Room an. Dieses Projekt hat eine neue Git-Historie und enthält keine privaten Daten oder Produktionsdienste.
+
+`npm run build` exportiert genau sieben erlaubte Dateien nach `dist/`. `npm run scan` prüft Dateien, Build, Metadaten und sämtliche Git-Objekte und zeigt bei Treffern nur Kategorie und Ort. Bei statischem Hosting die Header aus `scripts/serve.mjs` beibehalten und fünf Routen auf `index.html` umschreiben.
+
+Rechte: [NOTICE.md](NOTICE.md). Der Eigentümer hat die öffentliche Demo genehmigt; eine Open-Source-Lizenz wurde nicht erteilt.

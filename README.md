@@ -1,4 +1,6 @@
-# Meridian Drift · DEMO Control Room
+# Meridian Drift Observatory · DEMO Control Room
+
+Languages: [English](README.md) · [Русский](README.ru.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Українська](README.uk.md)
 
 **All balances, candles, orders and executions are synthetic DEMO data.**
 This is an interactive visitor demonstration, not a trading application,
@@ -56,9 +58,9 @@ Production providers, auth, adapters, arming, control-plane limits, data stores,
 logs, private reports and real trade histories are excluded. This model does
 not execute the production strategy, BrainV1 or production safety mechanisms.
 
-## Build, inspect and publish later
+## Build and inspect
 
-`npm run build` exports exactly six allowlisted files to `dist/`. No source maps
+`npm run build` exports exactly seven allowlisted files to `dist/`. No source maps
 or binary assets are generated. `npm run scan` scans the project, build files,
 Git metadata and **all Git objects**, including unreachable objects. Findings
 show category/location only. A clean scan is evidence from finite rules, not
@@ -66,11 +68,12 @@ a proof that arbitrary secrets can never exist. Review the exported file list.
 
 For a hosted static copy, preserve the CSP and other response headers implemented
 in `scripts/serve.mjs`, and rewrite the five named routes to `index.html`.
-Hosting, publishing a repository, network binding changes and live connections
-are not part of this local candidate.
+The donation destination, once configured, is a visitor-opened external link;
+the application makes no payment requests. Only methods and currencies actually
+supported by that destination can be used. Verify the destination before sending.
 
 ## Rights
 
-See `NOTICE.md`. No open-source license grant has been selected. Publication
-requires owner approval of this candidate and resolution of the source-code
-license. Do not imply an upstream license or permission that has not been given.
+See `NOTICE.md`. The owner authorized public presentation of this demo. No
+open-source license grant has been selected; all rights remain reserved. Do not
+imply an upstream license or permission that has not been given.

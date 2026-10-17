@@ -2,7 +2,7 @@
   "name": "adaptive-trading-lab-demo",
   "version": "0.1.0",
   "private": true,
-  "description": "Meridian Drift: synthetic Control Room demonstration",
+  "description": "Meridian Drift Observatory: synthetic Control Room demonstration",
   "license": "UNLICENSED",
   "type": "module",
   "engines": { "node": ">=22" },

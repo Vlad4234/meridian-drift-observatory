@@ -3,8 +3,8 @@
 The Control Room palette, navigation names and layout arrangement derive from
 owner-provided interface sources. Meridian Drift names and field-archive copy
 derive from the owner-provided concept. No source license or asset license file
-was present in the inspected inputs. Owner confirmation of publication rights
-and choice of a public code license remain required before publication.
+was present in the inspected inputs. The owner authorized publication of this
+separate demo. No public code license was selected.
 
 The browser logic, mock model, plain CSS adaptation, SVG candles and favicon
 were prepared for this demo. No third-party images, fonts, icons, screenshots,
