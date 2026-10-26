@@ -8,6 +8,7 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "demo:replay": "node scripts/demo-replay.mjs",
     "start": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs",
     "scan": "node scripts/scan.mjs"

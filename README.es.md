@@ -34,6 +34,10 @@ La portada muestra un mensaje en diez idiomas y la dirección EVM pública del p
 
 Meridian Drift es un concepto escrito en el proyecto de origen, sin maqueta visual. La paleta y disposición se adaptaron del Control Room existente. Esta demo tiene su propio historial Git, sin datos privados ni servicios de producción.
 
-`npm run build` exporta siete archivos permitidos a `dist/`. `npm run scan` revisa archivos, build y todos los objetos Git, indicando solo la categoría y ubicación de cualquier hallazgo. Para alojarlo como sitio estático conserva las cabeceras de `scripts/serve.mjs` y dirige las cinco rutas a `index.html`.
+`npm run build` exporta ocho archivos permitidos a `dist/`. `npm run scan` revisa archivos, build y todos los objetos Git, indicando solo la categoría y ubicación de cualquier hallazgo. Para alojarlo como sitio estático conserva las cabeceras de `scripts/serve.mjs` y dirige las cinco rutas a `index.html`.
 
 Este proyecto público separado usa la licencia MIT: [LICENSE](LICENSE). La licencia no se extiende a los repositorios privados de origen; consulta [NOTICE.md](NOTICE.md).
+
+## Reproducción causal sin conexión
+
+Ejecuta `npm run demo:replay` para ver eventos sintéticos, también visibles en Sistemas. Cada decisión usa solo datos disponibles en ese instante, nunca datos recibidos después. El estado obsoleto rechaza la siguiente decisión. Una ejecución simulada requiere un paso mock explícito. El saldo es ficticio, no una rentabilidad real.

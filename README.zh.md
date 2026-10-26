@@ -34,6 +34,10 @@ npm start
 
 Meridian Drift 在原项目中是文字概念，并没有视觉原型。配色和布局改编自已有的 Control Room。此演示有独立 Git 历史，不含私人数据或生产服务。
 
-`npm run build` 仅向 `dist/` 导出七个允许的文件。`npm run scan` 检查项目文件、构建产物和全部 Git 对象；如发现问题，只显示类别与位置。静态托管时，请保留 `scripts/serve.mjs` 的响应头，并将五个路由指向 `index.html`。
+`npm run build` 仅向 `dist/` 导出八个允许的文件。`npm run scan` 检查项目文件、构建产物和全部 Git 对象；如发现问题，只显示类别与位置。静态托管时，请保留 `scripts/serve.mjs` 的响应头，并将五个路由指向 `index.html`。
 
 这个独立的公开演示采用 MIT 许可证：[LICENSE](LICENSE)。该许可不涵盖私有源仓库；另见 [NOTICE.md](NOTICE.md)。
+
+## 离线回放与因果顺序
+
+运行 `npm run demo:replay` 可查看合成事件时间线，系统页面也会显示。决策只能读取当时已可用的数据，不能预见后来到达的数据。状态过期时，下一次决策会被拒绝。模拟成交只在明确的 mock 步骤中发生。余额为虚构单位，不代表真实收益。

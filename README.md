@@ -63,9 +63,9 @@ not execute the production strategy, BrainV1 or production safety mechanisms.
 
 ## Build and inspect
 
-`npm run build` exports exactly seven allowlisted files to `dist/`. No source maps
+`npm run build` exports exactly eight allowlisted files to `dist/`. No source maps
 or binary assets are generated. `npm run scan` scans the project, build files,
-Git metadata and **all Git objects**, including unreachable objects. Findings
+tracked metadata and **all Git objects**, including unreachable objects. Findings
 show category/location only. A clean scan is evidence from finite rules, not
 a proof that arbitrary secrets can never exist. Review the exported file list.
 
@@ -82,3 +82,7 @@ address is separate from the synthetic trading account and mock model.
 
 See `NOTICE.md`. The owner licensed this separate public demo under MIT; see `LICENSE`. This
 does not license the private source repositories or any excluded production code.
+
+## Offline causal replay
+
+Run `npm run demo:replay` to print a deterministic synthetic event timeline. The Systems page displays the same replay. A decision sees only book data available at its time, not later arrivals; stale state rejects the next decision. The sole fill occurs on an explicit mock step. Balances are fictional units, not market returns.

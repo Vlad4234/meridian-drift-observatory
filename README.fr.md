@@ -34,6 +34,10 @@ L'accueil présente un message en EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI et l'adresse EVM
 
 Le concept Meridian Drift est un texte du projet source, sans maquette visuelle. La palette et la disposition adaptent le Control Room existant. Le projet possède un historique Git neuf, sans données privées ni services de production.
 
-`npm run build` exporte sept fichiers autorisés vers `dist/`. `npm run scan` inspecte les fichiers, la construction, les métadonnées et tous les objets Git; seules la catégorie et la localisation des résultats s'affichent. Pour un hébergement statique, conservez les en-têtes de `scripts/serve.mjs` et redirigez les cinq routes vers `index.html`.
+`npm run build` exporte huit fichiers autorisés vers `dist/`. `npm run scan` inspecte les fichiers, la construction, les métadonnées et tous les objets Git; seules la catégorie et la localisation des résultats s'affichent. Pour un hébergement statique, conservez les en-têtes de `scripts/serve.mjs` et redirigez les cinq routes vers `index.html`.
 
 Voir [NOTICE.md](NOTICE.md) pour les droits. Cette démonstration publique séparée est sous licence MIT; voir [LICENSE](LICENSE). Les dépôts privés sources ne sont pas couverts.
+
+## Rejeu hors ligne et causalité
+
+Lancez `npm run demo:replay` pour afficher les événements synthétiques; ils figurent aussi sur la page Systèmes. Une décision ne voit que les données disponibles à cet instant, jamais celles arrivées plus tard. Un état périmé rejette la décision suivante. Une exécution simulée exige une étape explicite. Le solde est fictif, pas un rendement réel.

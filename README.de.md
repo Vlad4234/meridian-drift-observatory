@@ -34,6 +34,10 @@ Die Startseite zeigt Texte in EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI sowie die öffentlic
 
 Meridian Drift stammt aus einem Textkonzept im Quellprojekt; eine visuelle Vorlage lag nicht vor. Farben und Layout lehnen sich an den vorhandenen Control Room an. Dieses Projekt hat eine neue Git-Historie und enthält keine privaten Daten oder Produktionsdienste.
 
-`npm run build` exportiert genau sieben erlaubte Dateien nach `dist/`. `npm run scan` prüft Dateien, Build, Metadaten und sämtliche Git-Objekte und zeigt bei Treffern nur Kategorie und Ort. Bei statischem Hosting die Header aus `scripts/serve.mjs` beibehalten und fünf Routen auf `index.html` umschreiben.
+`npm run build` exportiert genau acht erlaubte Dateien nach `dist/`. `npm run scan` prüft Dateien, Build, Metadaten und sämtliche Git-Objekte und zeigt bei Treffern nur Kategorie und Ort. Bei statischem Hosting die Header aus `scripts/serve.mjs` beibehalten und fünf Routen auf `index.html` umschreiben.
 
 Rechte: [NOTICE.md](NOTICE.md). Diese separate öffentliche Demo steht unter der MIT-Lizenz; siehe [LICENSE](LICENSE). Private Quellrepositorys sind nicht abgedeckt.
+
+## Offline-Replay und Kausalität
+
+Mit `npm run demo:replay` wird eine synthetische Ereignisfolge angezeigt, ebenso auf der Seite Systeme. Eine Entscheidung sieht nur zu diesem Zeitpunkt verfügbare Daten, keine später eingetroffenen. Bei veraltetem Zustand wird die nächste Entscheidung abgelehnt. Eine simulierte Ausführung erfolgt nur in einem ausdrücklichen Mock-Schritt. Der Saldo ist fiktiv, keine echte Rendite.

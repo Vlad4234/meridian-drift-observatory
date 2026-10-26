@@ -34,6 +34,10 @@ La home mostra un messaggio EN/RU/FR/IT/DE/UK/ES/JA/ZH/HI e l'indirizzo EVM pubb
 
 Meridian Drift è un concept testuale nel progetto originale, privo di bozzetto visivo. Colori e disposizione sono adattati dall'interfaccia Control Room esistente. Questo progetto ha una nuova storia Git e non include dati privati o servizi di produzione.
 
-`npm run build` esporta sette file consentiti in `dist/`. `npm run scan` controlla file, build, metadati e tutti gli oggetti Git, mostrando solo categoria e posizione dei rilievi. Per hosting statico conserva le intestazioni di `scripts/serve.mjs` e inoltra le cinque route a `index.html`.
+`npm run build` esporta otto file consentiti in `dist/`. `npm run scan` controlla file, build, metadati e tutti gli oggetti Git, mostrando solo categoria e posizione dei rilievi. Per hosting statico conserva le intestazioni di `scripts/serve.mjs` e inoltra le cinque route a `index.html`.
 
 Consulta [NOTICE.md](NOTICE.md). Questa demo pubblica separata è distribuita con licenza MIT; consulta [LICENSE](LICENSE). I repository privati originali non sono coperti.
+
+## Replay offline e causalità
+
+Esegui `npm run demo:replay` per vedere gli eventi sintetici, disponibili anche nella pagina Sistemi. Una decisione vede solo i dati già disponibili, non quelli arrivati dopo. Uno stato obsoleto rifiuta la decisione successiva. Il mock esegue un ordine solo in un passaggio esplicito. Il saldo è fittizio, non un rendimento reale.
